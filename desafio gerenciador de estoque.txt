@@ -1,0 +1,52 @@
+Gerenciador de Estoque Simples (Array Associativo)
+
+Descrição do exercício:
+
+Crie um programa de terminal para gerenciar um estoque simples. O programa deve permitir ao usuário:
+
+- Adicionar um item (informando o nome do item e a quantidade).
+- Remover um item específico do estoque.
+- Listar os itens e suas quantidades.
+- Consultar a quantidade total de itens no estoque (somando todas as quantidades).
+- Sair do programa.
+
+Requisitos técnicos:
+
+- Utilize array associativo para armazenar os itens e suas quantidades.
+- Utilize readline() para capturar dados do terminal.
+- Use array_key_exists() para verificar se o item já existe no estoque.
+- Utilize unset() para remover um item do array.
+- Use foreach para listar os itens.
+- Utilize array_sum() para somar todas as quantidades dos itens.
+
+Exemplo de interação com o usuário:
+
+Escolha uma opção:
+  1. Adicionar item
+  2. Remover item
+  3. Listar itens
+  4. Consultar quantidade total
+  5. Sair
+Digite sua opção: 1
+Digite o nome do item: Leite
+Digite a quantidade: 2
+Item adicionado ao estoque!
+
+Escolha uma opção:
+  1. Adicionar item
+  2. Remover item
+  3. Listar itens
+  4. Consultar quantidade total
+  5. Sair
+Digite sua opção: 3
+Estoque atual:
+- Leite: 2
+
+Escolha uma opção:
+  1. Adicionar item
+  2. Remover item
+  3. Listar itens
+  4. Consultar quantidade total
+  5. Sair
+Digite sua opção: 4
+Quantidade total de itens no estoque: 2

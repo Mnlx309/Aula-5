@@ -1,0 +1,67 @@
+Exemplos de uso das funções em PHP
+
+array_key_exists() → Verifica se um item (chave) existe no array.
+
+Exemplo:
+<?php
+$estoque = ["Arroz" => 5, "Feijão" => 3];
+
+if (array_key_exists("Arroz", $estoque)) {
+    echo "Arroz está no estoque.\n";
+} else {
+    echo "Arroz não está no estoque.\n";
+}
+?>
+
+Saída:
+Arroz está no estoque.
+
+
+unset() → Remove um item do array.
+
+Exemplo:
+<?php
+$estoque = ["Arroz" => 5, "Feijão" => 3, "Leite" => 2];
+
+unset($estoque["Leite"]); // Remove o item 'Leite'
+
+print_r($estoque);
+?>
+
+Saída:
+Array
+(
+    [Arroz] => 5
+    [Feijão] => 3
+)
+
+
+foreach → Percorre todos os itens para exibir.
+
+Exemplo:
+<?php
+$estoque = ["Arroz" => 5, "Feijão" => 3, "Leite" => 2];
+
+foreach ($estoque as $item => $quantidade) {
+    echo "- {$item}: {$quantidade}\n";
+}
+?>
+
+Saída:
+- Arroz: 5
+- Feijão: 3
+- Leite: 2
+
+
+array_sum() → Soma todos os valores do array.
+
+Exemplo:
+<?php
+$estoque = ["Arroz" => 5, "Feijão" => 3, "Leite" => 2];
+
+$total = array_sum($estoque);
+echo "Quantidade total de itens: {$total}\n";
+?>
+
+Saída:
+Quantidade total de itens: 10

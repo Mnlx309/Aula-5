@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercício e Exemplos de Funções PHP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 800px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        ul {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exercício com Arrays Multidimensionais em PHP</h1>
+
+    <h2>Descrição detalhada do exercício</h2>
+    <p>
+        O objetivo deste exercício é criar um sistema simples para gerenciar informações de alunos e suas notas, utilizando arrays multidimensionais em PHP. 
+        Você deverá criar uma estrutura onde cada aluno seja representado por um array associativo contendo:
+    </p>
+    <ul>
+        <li><strong>Nome do aluno</strong> (string)</li>
+        <li><strong>Notas</strong> (array numérico contendo as três notas do aluno)</li>
+    </ul>
+    <p>
+        A lista completa de alunos será armazenada em um array multidimensional, onde cada elemento é um aluno com seu nome e suas notas.
+    </p>
+
+    <h3>Exemplo de array multidimensional esperado:</h3>
+    <pre><code>&lt;?php
+$alunos = [
+    [
+        "nome" => "Ana",
+        "notas" => [8, 7, 9]
+    ],
+    [
+        "nome" => "Carlos",
+        "notas" => [6, 9, 7]
+    ],
+    [
+        "nome" => "Beatriz",
+        "notas" => [10, 10, 9]
+    ]
+];
+?&gt;</code></pre>
+
+    <p>
+        Seu programa deverá permitir que o usuário:
+    </p>
+    <ul>
+        <li>Adicione alunos e suas três notas</li>
+        <li>Liste todos os alunos, mostrando o nome, as notas (separadas por vírgula) e a média das notas</li>
+        <li>Calcule a média de cada aluno somando as notas com <code>array_sum()</code> e dividindo pela quantidade de notas, obtida com <code>count()</code></li>
+    </ul>
+
+    <p>
+        Para entrada de dados no terminal, utilize a função <code>readline()</code>, que permite capturar as informações digitadas pelo usuário.
+        Para exibir as notas separadas por vírgula, utilize a função <code>implode()</code>, que junta os elementos de um array em uma string.
+    </p>
+
+    <h2>Resumo das funções usadas no exercício:</h2>
+    <ul>
+        <li><code>readline()</code>: captura dados digitados pelo usuário no terminal.</li>
+        <li><code>array_sum()</code>: soma todos os valores de um array numérico.</li>
+        <li><code>count()</code>: retorna o número de elementos de um array.</li>
+        <li><code>implode()</code>: junta elementos de um array em uma string, separados por um caractere especificado.</li>
+    </ul>
+
+    <h2>Exemplos simples das funções:</h2>
+
+    <h3>1. <code>readline()</code></h3>
+    <p>Lê uma entrada do usuário no terminal.</p>
+    <pre><code>&lt;?php
+$nome = readline("Digite seu nome: ");
+echo "Olá, $nome!";
+?&gt;</code></pre>
+
+    <h3>2. <code>array_sum()</code></h3>
+    <p>Soma os valores dentro de um array.</p>
+    <pre><code>&lt;?php
+$notas = [7, 8, 9];
+$total = array_sum($notas);
+echo "Total das notas: $total"; // Saída: 24
+?&gt;</code></pre>
+
+    <h3>3. <code>count()</code></h3>
+    <p>Conta quantos elementos existem em um array.</p>
+    <pre><code>&lt;?php
+$notas = [7, 8, 9];
+$quantidade = count($notas);
+echo "Quantidade de notas: $quantidade"; // Saída: 3
+?&gt;</code></pre>
+
+    <h3>4. <code>implode()</code></h3>
+    <p>Une elementos de um array em uma string separada por vírgulas.</p>
+    <pre><code>&lt;?php
+$notas = [7, 8, 9];
+echo implode(", ", $notas); // Saída: 7, 8, 9
+?&gt;</code></pre>
+
+    <h3>5. <code>strtolower()</code></h3>
+    <p>Converte uma string para minúsculas.</p>
+    <pre><code>&lt;?php
+$texto = "PHP É MUITO LEGAL";
+echo strtolower($texto); // Saída: php é muito legal
+?&gt;</code></pre>
+
+    <h3>6. <code>number_format()</code></h3>
+    <p>Formata um número com casas decimais.</p>
+    <pre><code>&lt;?php
+$numero = 12.3456;
+echo number_format($numero, 2); // Saída: 12.35
+?&gt;</code></pre>
+
+</body>
+</html>
